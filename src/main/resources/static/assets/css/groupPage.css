@@ -1519,16 +1519,14 @@ body {
     background-color: #AFAFAF;
 }
 
-.allCheck, oneCheck {
-    top: 0px;
-    position: absolute;
-    left: 0px;
-    width: 0px;
-    height: 0px;
-    border-width: 0px;
-    opacity: 0;
+.allCheck {
+    zoom: 1.4;
     cursor: pointer;
-    display: none;
+}
+
+.oneCheck {
+    zoom: 1.4;
+    cursor: pointer;
 }
 
 #checkBoxBtn {

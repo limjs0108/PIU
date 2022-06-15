@@ -146,7 +146,7 @@
                                                             <div class="listCheckBoxForm">
                                                                 <label class="listCheckBox">
                                                                     <span class="material-symbols-outlined" id="checkBoxBtn">check_box_outline_blank</span>
-                                                                    <input type="checkbox" class="allCheck">
+                                                                    <input type="checkbox" class="allCheck" onclick="selectAll(this)">
                                                                 </label>
                                                             </div>
                                                         </span>
@@ -405,8 +405,7 @@
                                                             <div class="userListHeader1">
                                                                 <span class="listCheckBoxFrame">
                                                                     <div class="listCheckBoxForm">
-                                                                        <label class="listCheckBox">
-                                                                            <span class="material-symbols-outlined" id="checkBoxBtn">check_box_outline_blank</span>
+                                                                        <label class="listCheckBox">                                                                            
                                                                             <input type="checkbox" class="allCheck">
                                                                         </label>
                                                                     </div>
@@ -437,7 +436,7 @@
                                                                     <div class="userListBody1">
                                                                         <div class="sbCheckBoxFrame">
                                                                             <label class="sbCheckBoxForm">
-                                                                                <span class="material-symbols-outlined" id="checkBoxBtn">check_box_outline_blank</span>
+                                                                                
                                                                                 <input type="checkbox" class="oneCheck">                                                                                                                                                       
                                                                             </label>
                                                                         </div>
@@ -490,7 +489,7 @@
                                                                     <div class="userListBody1">
                                                                         <div class="sbCheckBoxFrame">
                                                                             <label class="sbCheckBoxForm">
-                                                                                <span class="material-symbols-outlined" id="checkBoxBtn">check_box_outline_blank</span>
+                                                                                
                                                                                 <input type="checkbox" class="oneCheck">                                                                                                                                                       
                                                                             </label>
                                                                         </div>
@@ -639,6 +638,13 @@
         returnList.style.display ="none";
     });
 
-    
+    function selectAll(selectAll) {
+        console.log("들어옴");
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+        checkboxes.forEach((checkbox) => {
+            checkbox.checked = selectAll.checked
+        })
+    }
 </script>
 </html>
