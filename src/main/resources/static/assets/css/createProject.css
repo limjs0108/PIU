@@ -560,6 +560,7 @@ option {
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(229, 229, 229);
     border-radius: 3px;
+    background-size: 100% 100%;
 }
 
 .photoImgForm {
@@ -1082,9 +1083,12 @@ option {
 }
 
 .groupIntroProfileForm {
+    border: 1px silver solid;
     position: relative;
     width: 76px;
     height: 76px;
+    background-size: 100% 100%;
+    border-radius: 40px;
 }
 
 .groupIntroProfileBox {
