@@ -401,8 +401,26 @@ body {
     color: inherit;
 }
 
-.addProjectBtn, .returnListBtnBox {
+.addProjectBtn  {
     padding: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 0;
+    --system-on-color: #FFFFFF;
+    background-color: rgb(255, 91, 20);
+    color: var(--system-on-color);
+    border-width: 0px;
+    border-radius: 2px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    display: inline-flex;
+    position: relative;
+}
+
+.returnListBtnBox {
+    padding: 3px;
     cursor: pointer;
     overflow: hidden;
     z-index: 0;
@@ -455,6 +473,16 @@ body {
 
 .returnListText {
     margin-left: 6px;
+    font-size: 13px;
+    margin-right: 4px;
+}
+
+.returnImg {
+    font-size: 22px;
+}
+
+.showListhAgree {
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .addBoundary {
@@ -1519,15 +1547,11 @@ body {
     background-color: #AFAFAF;
 }
 
-.allCheck {
+.allCheck, .oneCheck {
     zoom: 1.4;
     cursor: pointer;
 }
 
-.oneCheck {
-    zoom: 1.4;
-    cursor: pointer;
-}
 
 #checkBoxBtn {
     color: silver;
@@ -1706,24 +1730,25 @@ option:disabled {
     height: 100%;
 }
 
+input[type="checkbox"]:checked {
+    background:rgb(255, 91, 20);
+}
+
 .pmBtn, .pdBtn {
 
     font-size: 12px;
 }
 
-.oneCheck {
-    display: none;
-}
-
 
 .givePointBtn {
-    color: #101010;
+    color: white;
     border: 1px rgba(0, 0, 0, 0.15) solid;
-    background-color: white;
+    background-color: rgb(255, 91, 20);
     padding: 9px;
     font-size: 12px;
     cursor: pointer;
     font-weight: 700;
+    border-radius: 4px;
 }
 
 .dgivePointBtn {
@@ -1732,6 +1757,7 @@ option:disabled {
     background-color: rgba(0, 0, 0, 0.1);
     padding: 9px;
     font-size: 12px;
+    border-radius: 4px;
 }
 
 .progressCheck {
