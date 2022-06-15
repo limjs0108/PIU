@@ -98,7 +98,7 @@ body {
     text-decoration: none;
     color: inherit;
     font-size: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
 }
 
@@ -253,7 +253,7 @@ body {
 }
 
 .sTitle {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 12px;
     font-weight: 550;
     border-width: 0px;
@@ -295,7 +295,7 @@ body {
 }
 
 .sProjectList {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     padding-top: 13px;
     padding-bottom: 13px;
     padding-left: 47px;
