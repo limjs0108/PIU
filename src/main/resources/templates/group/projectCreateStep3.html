@@ -91,8 +91,8 @@
                                 <div class="imgInsertBox">
                                     <div class="imgInsertForm">
                                         <div class="imgInsertContainer">
-                                            <label class="imgInsertWindow">
-                                                <input class="imgInsert" type="file" accept="image/*,video/mp4,video/x-m4v,video/*">
+                                            <label for="attach1"class="imgInsertWindow">
+                                                
                                                 <div class="introImgContainer">
                                                 <div class="introImgBox">
                                                     <img src="/src/main/resources/static/images/add-photo-portrait.png" class="introImgPlus">
@@ -103,8 +103,8 @@
                                             </label>                                            
                                         </div>
                                         <div class="imgInsertContainer">
-                                            <label class="imgInsertWindow">
-                                                <input class="imgInsert" type="file" accept="image/*,video/mp4,video/x-m4v,video/*">
+                                            <label for="attach2" class="imgInsertWindow">
+                                                
                                                 <div class="introImgContainer">
                                                 <div class="introImgBox">
                                                     <img src="/src/main/resources/static/images/add-photo-portrait.png" class="introImgPlus">
@@ -115,8 +115,8 @@
                                             </label>                                            
                                         </div>
                                         <div class="imgInsertContainer">
-                                            <label class="imgInsertWindow">
-                                                <input class="imgInsert" type="file" accept="image/*,video/mp4,video/x-m4v,video/*">
+                                            <label for="attach3" class="imgInsertWindow">
+                                                
                                                 <div class="introImgContainer">
                                                 <div class="introImgBox">
                                                     <img src="/src/main/resources/static/images/add-photo-portrait.png" class="introImgPlus">
@@ -126,6 +126,9 @@
                                             </div>
                                             </label>                                            
                                         </div>
+                                        <input class="attach1" id="attach1" type="file">
+                                        <input class="attach2" id="attach2" type="file">
+                                        <input class="attach3" id="attach3" type="file">
                                     </div>
                                 </div>
                                 <div class="nextBtnFrame">
@@ -194,4 +197,39 @@
         </div>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+     //첨부파일 input태그 가져오기
+    const file = document.querySelector("input[type='file']");
+    const thumbnail = document.querySelectorAll("label[for='attach'] div.introImgContainer");
+    console.log(file);
+    console.log(thumbnail);
+    //첨부파일이 등록되었다면 change이벤트 발생
+    file.addEventListener("change", function(event){
+        //특정 경로의 파일을 읽어올 때 사용.
+        console.log(file);
+        for(let i=0;i<thumbnail.length;i++){
+            let reader1 = new FileReader();
+            if(!event.target.files[i]){
+                return;
+            }
+            reader1.readAsDataURL(event.target.files[i]);
+            console.log(event.target.files[i]);
+            reader1.onload = function(event){
+                //등록된 파일의 경로에 작성된 파일의 타입검사
+                if(event.target.result.includes("image")){
+                    console.log("이미지 파일입니다.");
+                    //등록된 파일의 경로로 대체
+                    thumbnail[i].style.backgroundImage = "url(\"" + event.target.result + "\")";
+                }else{
+                    alert("이미지 파일이 아닙니다.");
+                    //미리 준비해놓은 이미지 경로로 대체
+                    thumbnail[i].style.backgroundImage = "url(/images/error.png)";
+                }
+            
+            }
+            thumbnail[i].style.display = "block";
+        }
+    });
+</script>
 </html>

@@ -931,7 +931,7 @@ option {
     cursor: pointer;
 }
 
-.imgInsert {
+.attach1, .attach2, .attach3 {
     margin:0;
     display: none;
 }
