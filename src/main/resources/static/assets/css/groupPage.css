@@ -713,6 +713,15 @@ body {
     overflow: hidden;
 }
 
+.userhListhMail, .userListhTitle, .userListhState, .userListhPhone, .userListhAgree {
+    font-family: 'Noto Sans KR', sans-serif;
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 .showListHeader6 {
     display: flex;
     padding: 19px 16px;
@@ -742,6 +751,13 @@ body {
     padding: 19px 16px;
     flex: 0 1 180px;
     margin-right: 10px;
+    min-width: 0;
+}
+
+.userListHeader8 {
+    display: flex;
+    padding: 19px 16px;
+    margin-right: 85px;
     min-width: 0;
 }
 
@@ -915,7 +931,7 @@ body {
     min-width: 0;
 }
 
-.sbTitle {
+.sbTitle, .ulTitle {
     font-family: 'Noto Sans KR', sans-serif;
     border-width: 0px;
     color: var(--system-on-color);
@@ -957,7 +973,7 @@ body {
     flex-direction: row;
 }
 
-.sbState {
+.sbState, .ulPhone {
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.125rem;
     font-size: 12px;
@@ -1036,6 +1052,14 @@ body {
     text-overflow: ellipsis;
     white-space: nowrap;
     margin-right: 10px;
+    min-width: 0;
+}
+
+.userListBody8 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 85px;
     min-width: 0;
 }
 
